@@ -37,6 +37,7 @@ public class FilesController {
       return ResponseEntity.status(HttpStatus.OK).body(new ResponseMessage(message));
     } catch (Exception e) {
       message = "Could not upload the file: " + file.getOriginalFilename() + "!";
+      message += " Please control your file " ;
       return ResponseEntity.status(HttpStatus.EXPECTATION_FAILED).body(new ResponseMessage(message));
     }
   }
